@@ -20,6 +20,7 @@
     <script class="rs-file" src="js/jquery-1.8.3.min.js"></script>
     <script class="rs-file" src="js/jquery.royalslider.js"></script>
     <script class="rs-file" src="js/modules/jquery.rs.active-class.js"></script>
+    <script src="js/jquery.windows.js"></script>
     <link class="rs-file" href="css/royalslider.css" rel="stylesheet">
     <!-- syntax highlighter -->
     <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
@@ -60,30 +61,35 @@
     <a href="" id="ber"></a>
     <a href="" id="mop"></a>
   </div>
-  <div class="pagesCont">
+  <div class="contWithPad">
+    <div class="pagesCont window">
     <!-- slider code start -->
-    <div class="sliderPart">
-      <div class="sliderContainer">
-        <div id="gallery-1" class="royalSlider rsDefault">
-          <div class="slide">
-            <a href=""><img src="img/saleCircle.png" class="saleCircleImg" /></a>
-            <a class="rsImg" href="img/main-slide.jpg"></a>
+      <div class="sliderPart">
+        <div class="sliderContainer">
+          <div id="gallery-1" class="royalSlider rsDefault">
+            <div class="slide">
+              <a href="#"><img src="img/saleCircle.png" class="saleCircleImg" /></a>
+              <a class="rsImg" href="img/main-slide.jpg"></a>
+            </div>
+            <a class="rsImg" href="img/boots.jpg"></a>
+            <a class="rsImg" href="img/blueMan.jpg"></a>
+            <!-- hack: duplicate slides, because slider removes last slide and makes it first -->
+            <div class="slide">
+              <img src="img/saleCircle.png" class="saleCircleImg" />
+              <a class="rsImg" href="img/main-slide.jpg"></a>
+            </div>
+            <a class="rsImg" href="img/boots.jpg"></a>
+            <a class="rsImg" href="img/blueMan.jpg"></a>
           </div>
-          <a class="rsImg" href="img/boots.jpg"></a>
-          <a class="rsImg" href="img/blueMan.jpg"></a>
-          <!-- hack: duplicate slides, because slider removes last slide and makes it first -->
-          <div class="slide">
-            <img src="img/saleCircle.png" class="saleCircleImg" />
-            <a class="rsImg" href="img/main-slide.jpg"></a>
-          </div>
-          <a class="rsImg" href="img/boots.jpg"></a>
-          <a class="rsImg" href="img/blueMan.jpg"></a>
         </div>
       </div>
-    </div>
-    <div class="news">hi</div>
+      <div class="newsPart window">hi</div>
+      <div class="clubPart window">club</div>
+      <div class="marketPart window">market</div>
+      <div class="brendsPart window">brends</div>
 
    <!-- tabs & footer end /// --> 
+   </div>
   </div>
     <script>
 
@@ -128,8 +134,6 @@
             imgHeight: slideHeight,
             slidesSpacing: 0
           }).data('royalSlider');
-
-
           function recalculateMenu()
           {
             var $menuContainer = $('.menuContainer');
@@ -150,14 +154,10 @@
               $('.rsDefault.rsHor .rsArrowRight').css("right",66 + "px");
             }
           }
-
           setTimeout(function () {
             recalculateMenu();
             centerSlider();
-          }, 250);
-
-            
-          
+          }, 250); 
         }
 
 
@@ -168,6 +168,23 @@
 
     </script>
 
+    <script>
+
+      $(document).ready(function(){
+
+          var $windows = $('.window');
+
+          $windows.windows({
+              snapping: true,
+              snapSpeed: 200,
+              snapInterval: 100,
+              onScroll: function(s){},
+              onSnapComplete: function($el){},
+              onWindowEnter: function($el){}
+          });
+
+      });
+    </script>
   </div>
   </body>
 </html>

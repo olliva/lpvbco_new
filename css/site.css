@@ -89,7 +89,9 @@
 
 
 
-
+html, body{
+	height: 100%;
+}
 body{
 	height: 100%;
 	font-family: "Trebuchet MS";
@@ -261,14 +263,54 @@ body{
 			.leftMenu #mop:hover{
 				background: #edf3f8 url(../img/black-mp.png) no-repeat center;
 			}
+.contWithPad{
+	position: relative;
+	padding-left: 120px;
+	height: 100%;
+}
+.pagesCont{
+	position: relative;
+	height: 100%;
+}
 .sliderPart{
-	margin-left: 120px;
 	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
 }
 .rsContainer img{
 	margin-top: 0 !important;
 	margin-left: 0 !important;
 	width: 100%;
+}
+.newsPart{
+	position: absolute;
+	top: 100%;
+	height: 100%;
+	width: 100%;
+	padding-top: 75px;
+}
+.clubPart{
+	position: absolute;
+	top: 200%;
+	height: 100%;
+	width: 100%;
+	padding-top: 75px;
+}
+.marketPart{
+	position: absolute;
+	top: 300%;
+	height: 100%;
+	width: 100%;
+	padding-top: 75px;
+}
+.brendsPart{
+	position: absolute;
+	top: 400%;
+	height: 100%;
+	width: 100%;
+	padding-top: 75px;
 }
 
 
