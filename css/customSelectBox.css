@@ -1,0 +1,128 @@
+*:focus{
+	outline-style: none;
+}
+.selectList:focus,
+select:focus{
+	outline-style: none;
+}
+.customSelect { 
+	position: relative;			
+	font: italic 14px/16px "Trebuchet MS";
+	float: left;
+	margin-right: 23px;
+	width: 223px !important;
+}		
+.customSelect .selectedValue {
+  padding: 9px 7px;
+  margin-bottom: 0;
+  color: black;
+  cursor: pointer;
+  background-color: #fff;
+  background-repeat: repeat-x;
+  border: 1px solid #bbbbbb;
+  border-color: #cccccc;
+}
+.customSelect .selectList {
+	z-index: 100;
+	position: absolute;
+	left: -999em;
+	top: -999em;
+	
+  margin:0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-top: 0;
+  box-shadow:0px 1px 0px rgba(0,4,2,0.34);
+}
+.customSelect.select-open .selectList {
+	left: 0 !important;
+	top: auto !important;
+}
+.customSelect .selectList dl {
+	background: #fff;	
+}
+.customSelect .selectList dl.defaultScrollbar {
+	overflow-x: hidden;
+	overflow-y: scroll;	
+}
+.customSelect dl, .customSelect dd {
+	margin: 0;
+}
+.customSelect dd {
+	zoom: 1;
+	cursor: pointer;
+}
+.customSelect dd:first-child{
+	display: none;
+}
+.customSelect .selectList dd.hovered {
+	background: #e45056;
+	color: #fff;
+}
+.customSelect dt {
+	font-weight: bold;
+	font-style: italic;
+	padding: 2px 10px 2px 6px;
+}	
+.customSelect dd {
+	padding: 8px 0 8px 16px;
+} 
+.hasJS select.custom {
+	position: absolute;
+	left: -999em;
+}
+.customSelect.disabled .selectedValue {
+	border: 1px solid #ccc;
+	color: #ccc;
+	cursor: default;
+}
+.customSelect .selectValueWrap .caret {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	cursor: pointer;
+	width: 36px;
+	height: 34px;
+	background: url(../img/c-s-arrow.gif) no-repeat 13px;
+}
+.select-open .selectValueWrap .caret{
+	background: #e5e5e5 url(../img/c-s-arrow-grey.gif) no-repeat 13px;
+}
+.customSelect .jspPane {
+	overflow-x: hidden;
+	width: 198px !important;
+}
+.customSelect .jspVerticalBar {
+	background: none;
+	width: 21px;
+	border-left: 1px solid #cccccc;
+}
+.customSelect .jspHorizontalBar {
+	height: 0;
+	overflow: hidden;
+}
+.customSelect .jspTrack {
+	background: none;
+	background: #f6f6f6;
+	width: 22px;
+}
+.customSelect .jspDrag {
+	background: #e5e5e5 url(../img/caret-new.gif) no-repeat center;
+	width: 21px;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #aeaeae;
+	box-shadow: inset 0px 1px 0px #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+.selectsPart a{
+	display: inline-block;
+}

@@ -29,9 +29,20 @@
     <link href="css/reset.css" rel="stylesheet">
     <!-- slider stylesheets -->
     <link class="rs-file" href="css/rs-default.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/customSelectBox.css">
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+
+
+
+
     
   </head>
-  <body >
+  <body class="noJS" id="example-1">
+  <script>
+      var bodyTag = document.getElementsByTagName("body")[0];
+      bodyTag.className = bodyTag.className.replace("noJS", "hasJS");
+  </script>
   
   <div class="header">
     <div class="menuContainer">
@@ -68,24 +79,169 @@
         <div class="sliderContainer">
           <div id="gallery-1" class="royalSlider rsDefault">
             <div class="slide">
-              <a href="#"><img src="img/saleCircle.png" class="saleCircleImg" /></a>
+              <div class="back"></div>
+              <a href="#"><img src="img/slide1-sale.png" class="saleCircleImg" /></a>
               <a class="rsImg" href="img/main-slide.jpg"></a>
             </div>
-            <a class="rsImg" href="img/boots.jpg"></a>
-            <a class="rsImg" href="img/blueMan.jpg"></a>
+            <div class="slide">
+              <div class="back"></div>
+              <a class="rsImg" href="img/boots.jpg"></a>
+            </div>
+            <div class="slide">
+              <div class="back"></div>
+              <a class="rsImg" href="img/blueMan.jpg"></a>
+            </div>
             <!-- hack: duplicate slides, because slider removes last slide and makes it first -->
             <div class="slide">
-              <img src="img/saleCircle.png" class="saleCircleImg" />
+              <div class="back"></div>
+              <a href=""><img src="img/slide1-sale.png" class="saleCircleImg" /></a>
               <a class="rsImg" href="img/main-slide.jpg"></a>
             </div>
-            <a class="rsImg" href="img/boots.jpg"></a>
-            <a class="rsImg" href="img/blueMan.jpg"></a>
+            <div class="slide">
+              <div class="back"></div>
+              <a class="rsImg" href="img/boots.jpg"></a>
+            </div>
+            <div class="slide">
+              <div class="back"></div>
+              <a class="rsImg" href="img/blueMan.jpg"></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="window" id="newsPart">hi</div>
+      <div class="window" id="newsPart">
+        <div class="notMainPageCont">
+          <h1><a href="">Новости</a></h1>
+          <div class="clearfix newsLine">
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news1.jpg" alt="">
+              </div>
+              <p class="date">21.03.2013</p>
+              <a href="" class="newName">Новая коллекция от&nbsp;Disigual</a>
+            </div>
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news2.jpg" alt="">
+              </div>
+              <p class="date">04.04.2013</p>
+              <a href="" class="newName">Кусочек Испании в&nbsp;Екатеринбурге</a>
+            </div>
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news3.jpg" alt="">
+              </div>
+              <p class="date">26.10.2012</p>
+              <a href="" class="newName">Обновленный магазин в&nbsp;ТЦ  &laquo;Европейский&raquo;</a>
+            </div>
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news4.jpg" alt="">
+              </div>
+              <p class="date">09.11.2012</p>
+              <a href="" class="newName">Коллекция весна-лето 2013 в&nbsp;&laquo;Метрополисе&raquo;</a>
+            </div>
+          </div>
+          <div class="clearfix newsLine">
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news1.jpg" alt="">
+              </div>
+              <p class="date">21.03.2013</p>
+              <a href="" class="newName">Новая коллекция от&nbsp;Disigual</a>
+            </div>
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news2.jpg" alt="">
+              </div>
+              <p class="date">04.04.2013</p>
+              <a href="" class="newName">Кусочек Испании в&nbsp;Екатеринбурге</a>
+            </div>
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news3.jpg" alt="">
+              </div>
+              <p class="date">26.10.2012</p>
+              <a href="" class="newName">Обновленный магазин в&nbsp;ТЦ  &laquo;Европейский&raquo;</a>
+            </div>
+            <div class="newCont">
+              <div class="imgCont">
+                <img src="img/news4.jpg" alt="">
+              </div>
+              <p class="date">09.11.2012</p>
+              <a href="" class="newName">Коллекция весна-лето 2013 в&nbsp;&laquo;Метрополисе&raquo;</a>
+            </div>
+          </div>
+          <div class="newsSubscriptio">
+            <label for="subscribe">Подписаться на рассылку</label>
+            <input type="text" value="Введите ваш e-mail" id="subscribe"/>
+            <a href="" class="subsctibeButton">Отправить</a>
+            <p class="subscribeInform">Для получения свежей информации об акциях, скидках и новинках</p>
+          </div>
+        </div>
+      </div>
       <div class="window" id="clubPart">club</div>
-      <div class="window" id="marketPart">market</div>
+      <div class="window" id="marketPart">
+        <div class="notMainPageCont">
+          <h1>Магазины</h1>
+          <div class="buttonsPart">
+            <div class="listButton">Списком</div>
+            <div class="mapButton">
+              На карте
+              <div class="whiteLine"></div>
+            </div>
+          </div>
+          <div class="selectsPart">
+            <select class="custom">
+              <option>Выберите город</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Canada">Canada</option>
+              <option value="China">China</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Greece">Greece</option>
+              <option value="Hungary">Hungary</option>
+              <option value="India">India</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Israel">Israel</option>
+            </select>
+            <select class="custom">
+              <option>Выберите ТЦ</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Canada">Canada</option>
+              <option value="China">China</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Greece">Greece</option>
+              <option value="Hungary">Hungary</option>
+              <option value="India">India</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Japan">Japan</option>
+            </select>
+          </div>
+          
+        </div>
+        <div class="mapContainer">
+          <div class="mapImgCont">
+            <img src="img/map.jpg" alt="">
+          </div>
+        </div>
+      </div>
       <div class="window" id="brendsPart">brends</div>
 
    <!-- tabs & footer end /// --> 
@@ -159,11 +315,8 @@
             centerSlider();
           }, 250); 
         }
-
-
         $(initializeSlider);
         $(window).resize(initializeSlider);
-
       })();
 
     </script>
@@ -171,9 +324,7 @@
     <script>
 
       $(document).ready(function(){
-
           var $windows = $('.window');
-
           $windows.windows({
               snapping: true,
               snapSpeed: 200,
@@ -182,7 +333,6 @@
               onSnapComplete: function($el){},
               onWindowEnter: function($el){}
           });
-
       });
     </script>
     <script type="text/javascript">
@@ -209,6 +359,23 @@
             scroll_to_elem ("clubPart",500)
           });
       });
+      </script>
+
+      <script src="js/jScrollPane.js"></script>
+      <script src="js/jquery.mousewheel.js"></script>
+      <script src="js/SelectBox.js"></script>
+      <script>  
+        $(function() {
+          
+          $("select.custom").each(function() {          
+            var sb = new SelectBox({
+              selectbox: $(this),
+              height: 224,
+              width: 221
+            });
+          });
+          
+        });
       </script>
   </div>
   </body>

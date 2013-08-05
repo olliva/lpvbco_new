@@ -121,12 +121,7 @@
 	width: 100%;
 	background: black;
 }
-.rsSlide img{
-	opacity: 0.7;
-}
-.rsActiveSlide img{
-	opacity: 1;
-}
+.rsSlide
 
 .royalSlider.rsAutoHeight,
 .rsAutoHeight .rsSlide {
