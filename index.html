@@ -37,11 +37,11 @@
     <div class="menuContainer">
       <a href=""><img src="img/logo.gif" alt="" class="logo"/></a>
       <ul class="topMenu">
-        <li><a href="">Бренды</a></li>
-        <li id="news"><a href="">Новости</a></li>
-        <li id="shop"><a href="">Магазины</a></li>
-        <li id="discount"><a href="">Акции</a></li>
-        <li id="club"><a href="">Клуб LVb</a></li>
+        <li id="brends">Бренды</li>
+        <li id="news">Новости</li>
+        <li id="shop">Магазины</li>
+        <li id="discount">Акции</li>
+        <li id="club">Клуб LVb</li>
       </ul>
     </div>
   </div>
@@ -64,7 +64,7 @@
   <div class="contWithPad">
     <div class="pagesCont window">
     <!-- slider code start -->
-      <div class="sliderPart">
+      <div class="window" id="sliderPart">
         <div class="sliderContainer">
           <div id="gallery-1" class="royalSlider rsDefault">
             <div class="slide">
@@ -83,10 +83,10 @@
           </div>
         </div>
       </div>
-      <div class="newsPart window">hi</div>
-      <div class="clubPart window">club</div>
-      <div class="marketPart window">market</div>
-      <div class="brendsPart window">brends</div>
+      <div class="window" id="newsPart">hi</div>
+      <div class="window" id="clubPart">club</div>
+      <div class="window" id="marketPart">market</div>
+      <div class="window" id="brendsPart">brends</div>
 
    <!-- tabs & footer end /// --> 
    </div>
@@ -185,6 +185,31 @@
 
       });
     </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          function scroll_to_elem(elem,speed) {
+            if(document.getElementById(elem)) {
+              var destination = jQuery('#'+elem).offset().top;
+              jQuery("html,body").animate({scrollTop: destination}, speed);
+            }
+          }
+          $("#brends").click(function(){
+            scroll_to_elem ("brendsPart",500)
+          });
+          $("#news").click(function(){
+            scroll_to_elem ("newsPart",500)
+          });
+          $("#shop").click(function(){
+            scroll_to_elem ("marketPart",500)
+          });
+          $("#discount").click(function(){
+            scroll_to_elem ("sliderPart",500)
+          });
+          $("#club").click(function(){
+            scroll_to_elem ("clubPart",500)
+          });
+      });
+      </script>
   </div>
   </body>
 </html>
