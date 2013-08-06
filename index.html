@@ -17,14 +17,7 @@
 
     <!-- slider JS files -->
     
-    <script class="rs-file" src="js/jquery-1.8.3.min.js"></script>
-    <script class="rs-file" src="js/jquery.royalslider.js"></script>
-    <script class="rs-file" src="js/modules/jquery.rs.active-class.js"></script>
-    <script src="js/jquery.windows.js"></script>
-    <link class="rs-file" href="css/royalslider.css" rel="stylesheet">
-    <!-- syntax highlighter -->
-    <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
-    <!-- preview-related stylesheets -->
+
     <link href="css/site.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <!-- slider stylesheets -->
@@ -32,6 +25,7 @@
     <link rel="stylesheet" href="css/customSelectBox.css">
     <link rel="stylesheet" href="css/example.css">
     <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+    <link class="rs-file" href="css/royalslider.css" rel="stylesheet">
 
 
 
@@ -110,7 +104,10 @@
       </div>
       <div class="window" id="newsPart">
         <div class="notMainPageCont">
-          <h1><a href="">Новости</a></h1>
+          <h1>
+            Новости
+            <a href="" class="littleArrow"><img src="img/arrow-right.gif" alt=""></a>
+          </h1>
           <div class="clearfix newsLine">
             <div class="newCont">
               <div class="imgCont">
@@ -172,16 +169,21 @@
             </div>
           </div>
           <div class="newsSubscriptio">
-            <label for="subscribe">Подписаться на рассылку</label>
-            <input type="text" value="Введите ваш e-mail" id="subscribe" class="subscribeInput"/>
-            <a href="" class="subsctibeButton">Отправить</a>
+            <form action="">
+              <label for="subscribe">Подписаться на рассылку</label>
+              <input type="text" value="Введите ваш e-mail" id="subscribe" class="subscribeInput"/>
+              <a href="" class="subsctibeButton">Отправить</a>
+            </form>
             <p class="subscribeInform">Для получения свежей информации об акциях, скидках и новинках</p>
           </div>
         </div>
       </div>
       <div class="window" id="clubPart">
         <div class="notMainPageCont">
-          <h1>Клуб</h1>
+          <h1>
+            Клуб
+            <a href="" class="littleArrow"><img src="img/arrow-right.gif" alt=""></a>
+          </h1>
           <div class="clubBack">
             <h2>Вы&nbsp;можете получить бонусную карту при совершении покупки<br/>на&nbsp;сумму от&nbsp;<span>3000</span>&nbsp;Р</h1>
             <p>В магазинах марок:<br/>
@@ -209,9 +211,12 @@
         <div class="notMainPageCont">
           <h1>Магазины</h1>
           <div class="buttonsPart">
-            <div class="listButton">Списком</div>
-            <div class="mapButton">
-              На карте
+            <div class="listButton notActive">
+              <span>Списком</span>
+              <div class="whiteLine"></div>
+            </div>
+            <div class="mapButton active">
+              <span>На карте</span>
               <div class="whiteLine"></div>
             </div>
           </div>
@@ -270,12 +275,45 @@
       <div class="window" id="brendsPart">
         <div class="notMainPageCont">
           <h1>ОДЕЖДА, ОБУВЬ И АКСЕССУАРЫ<br/>ОТ МИРОВЫХ БРЕНДОВ</h1>
+          <div class="brendsTable">
+            <div class="brRow clearfix">
+              <a  href="" class="brCell" id="brChe"></a>
+              <a  href="" class="brCell" id="brDkny"></a>
+              <a  href="" class="brCell" id="brNb"></a>
+              <a  href="" class="brCell" id="brDes"></a>
+            </div>
+            <div class="brRow clearfix">
+              <a  href="" class="brCell" id="brLc"></a>
+              <a  href="" class="brCell" id="brTmb"></a>
+              <a  href="" class="brCell" id="brNn"></a>
+              <a  href="" class="brCell" id="brZv"></a>
+            </div>
+            <div class="brRow clearfix">
+              <a  href="" class="brCell" id="brAldo"></a>
+              <a  href="" class="brCell" id="brJc"></a>
+              <a  href="" class="brCell" id="brMp"></a>
+              <a  href="" class="brCell" id="brCyan"></a>
+            </div>
+            <div class="brRow lastRow clearfix">
+              <div  href="" class="brCell"></div>
+              <a  href="" class="brCell" id="brDj"></a>
+              <a  href="" class="brCell" id="brBer"></a>
+              <div class="brCell"></div>
+            </div>
+          </div>
         </div>
       </div>
 
    <!-- tabs & footer end /// --> 
    </div>
   </div>
+    <script class="rs-file" src="js/jquery-1.8.3.min.js"></script>
+      <script class="rs-file" src="js/jquery.royalslider.js"></script>
+      <script class="rs-file" src="js/modules/jquery.rs.active-class.js"></script>
+      <script src="js/jquery.windows.js"></script>
+      
+      <!-- syntax highlighter -->
+      <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
     <script>
 
       (function () {
@@ -406,6 +444,9 @@
           
         });
       </script>
+      <script src="js/jquery.leanModal.min.js"></script>
+      <!-- preview-related stylesheets -->
+      <script src="js/inputs.js"></script>
   </div>
   </body>
 </html>
