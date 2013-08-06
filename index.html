@@ -34,8 +34,8 @@
   </head>
   <body class="noJS" id="example-1">
   <script>
-      // var bodyTag = document.getElementsByTagName("body")[0];
-      // bodyTag.className = bodyTag.className.replace("noJS", "hasJS");
+      var bodyTag = document.getElementsByTagName("body")[0];
+      bodyTag.className = bodyTag.className.replace("noJS", "hasJS");
   </script>
   
   <div class="header">
@@ -440,13 +440,13 @@
       <script>  
         $(function() {
           
-          // $("select.custom").each(function() {          
-          //   var sb = new SelectBox({
-          //     selectbox: $(this),
-          //     height: 224,
-          //     width: 223
-          //   });
-          // });
+          $("select.custom").each(function() {          
+            var sb = new SelectBox({
+              selectbox: $(this),
+              height: 224,
+              width: 223
+            });
+          });
           
         });
       </script>

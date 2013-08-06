@@ -70,7 +70,7 @@ select:focus{
 } 
 .hasJS select.custom {
 	position: absolute;
-	left: -999em;
+	z-index: 1;
 }
 .customSelect.disabled .selectedValue {
 	border: 1px solid #ccc;
