@@ -53,6 +53,7 @@ a:hover{
 	left: 24%;
 	top: 23%;
 	width: 28%;
+	opacity: 0.6;
 }
 
 
@@ -138,7 +139,7 @@ body{
 	.header ul.topMenu{
 		list-style: none;
 		float: right;
-		margin-top: 23px;
+		margin-top: 27px;
 		margin-right: 64px;
 	}
 		.header .menuContainer.bigMon ul.topMenu{
@@ -146,6 +147,9 @@ body{
 		}
 		.header ul.topMenu li{
 			display: inline-block;
+			font: normal 16px/21px "Trebuchet MS";
+			color: white;
+				border-bottom: 1px solid transparent;
 		}
 			.header ul.topMenu li#news{
 				margin-left: 47px;
@@ -158,12 +162,6 @@ body{
 			}
 			.header ul.topMenu li#shop{
 				margin-left: 37px;
-			}
-			.header ul.topMenu li {
-				font-size: 16px;
-				line-height: 24px;
-				color: white;
-				border-bottom: 1px solid transparent;
 			}
 				.header ul.topMenu li:hover{
 					color: #FFF;
@@ -330,6 +328,82 @@ body{
 	width: 100%;
 	padding-top: 75px;
 }
+	#clubPart .clubBack{
+		background: url(../img/club-back.jpg) no-repeat;
+		width: 960px;
+		height: 415px;
+		padding-top: 80px;
+		padding-left: 66px;
+		margin-bottom: 38px;
+	}
+	#clubPart h1{
+		margin-bottom: 0;
+		margin-top: 73px;
+		padding-bottom: 3px;
+	}
+	#clubPart h2{
+		margin: 0;
+		width: 380px;
+		font: normal 20px/28px "Trebuchet MS";
+		margin-top: -5px;
+	}
+		#clubPart h2 span{
+			font-size: 28px;
+			font-weight: bold;
+			line-height: 23px;
+		}
+	#clubPart p{
+		font: normal 14px/21px "Trebuchet MS";
+		color: black;
+		margin-top: 29px;
+		margin-left: 3px;
+		width: 360px;
+	}
+	#clubPart form{
+		margin-top: 71px;
+	}
+		#clubPart input.subscribeInput{
+			height: 36px;
+			width: 152px;
+			margin-left: 5px;
+		}
+		#clubPart form input:first-child{
+			margin-left: 1px;
+		}
+		#clubPart a.subsctibeButton{
+			margin-left: 3px;
+			padding: 7px 29px;
+		}
+	.linksRow{
+		list-style: none;
+		margin: 0;
+		margin-top: 23px;
+	}
+	.linksRow li{
+		display: block;
+		float: left;
+	}
+		.linksRow a{
+			font: normal 14px/20px "Trebuchet MS";
+			color: black;
+			border-bottom: 1px dashed #999999;
+			padding-bottom: 1px;
+		}
+			.linksRow a:hover{
+				color: black;
+				border-bottom-color: transparent;
+			}
+			.linksRow .leftColumn{
+				width: 326px;
+				padding-right: 50px;
+			}
+			.linksRow .centerColumn{
+				width: 355px;
+				padding-right: 50px;
+			}
+			.linksRow .rightColumn{
+				width: 279px;
+			}
 #marketPart{
 	position: absolute;
 	top: 300%;
@@ -385,6 +459,7 @@ body{
 	}
 		.mapImgCont{
 			box-shadow: inset 0px 1px 3px rgba(0,0,0,0.35);
+			height: 100%;
 		}
 		.mapContainer img{
 			width: 100%;
@@ -399,6 +474,22 @@ body{
 	width: 100%;
 	padding-top: 75px;
 }
+#brendsPart h1{
+	font: normal 32px/46px "Trebuchet MS";
+	text-align: center;
+	color: black;
+	border:0;
+	letter-spacing: 6px;
+	margin-top: 41px;
+}
+	#brendsPart a.brCell{
+		width: 240px;
+		height: 123px;
+		display: block;
+		float: left;
+	}
+
+
 .notMainPageCont{
 	width: 960px;
 	margin: 0 auto;
@@ -455,7 +546,7 @@ body{
 			font: bold 18px/24px "Trebuchet MS";
 			color: black;
 		}
-		.newsSubscriptio input{
+		input.subscribeInput{
 			font: italic 14px/24px "Trebuchet MS";
 			color: #787878;
 			height: 34px;
@@ -467,7 +558,7 @@ body{
 			margin-left: 16px;
 			padding-left: 6px;
 		}
-		.newsSubscriptio a.subsctibeButton{
+		a.subsctibeButton{
 			font: bold 16px/24px "Trebuchet MS";
 			text-shadow: 0px 1px 0px rgba(255,255,255,0.64);
 			color: black;
@@ -481,6 +572,9 @@ body{
 			-moz-border-radius: 2px;
 			border-radius: 2px;
 		}
+			a.subsctibeButton:hover{
+				color: black;
+			}
 		.newsSubscriptio p.subscribeInform{
 			position: absolute;
 			width: 215px;

@@ -173,13 +173,38 @@
           </div>
           <div class="newsSubscriptio">
             <label for="subscribe">Подписаться на рассылку</label>
-            <input type="text" value="Введите ваш e-mail" id="subscribe"/>
+            <input type="text" value="Введите ваш e-mail" id="subscribe" class="subscribeInput"/>
             <a href="" class="subsctibeButton">Отправить</a>
             <p class="subscribeInform">Для получения свежей информации об акциях, скидках и новинках</p>
           </div>
         </div>
       </div>
-      <div class="window" id="clubPart">club</div>
+      <div class="window" id="clubPart">
+        <div class="notMainPageCont">
+          <h1>Клуб</h1>
+          <div class="clubBack">
+            <h2>Вы&nbsp;можете получить бонусную карту при совершении покупки<br/>на&nbsp;сумму от&nbsp;<span>3000</span>&nbsp;Р</h1>
+            <p>В магазинах марок:<br/>
+              Chevignon, NafNaf, Timberland, Desigual, Berghaus, New Balance, DKNY Jeans и Mark O`Polo.
+            </p>
+            <form action="">
+              <input type="text" value="Номер карты" class="subscribeInput"/>
+              <input type="text" value="PIN" class="subscribeInput"/>
+              <a href="" class="subsctibeButton">Войти</a>
+            </form>
+          </div>
+          <ul class="linksRow clearfix">
+            <li class="leftColumn"><a href="">Как получить бонусные баллы?</a></li>
+            <li class="centerColumn"><a href="">Как воспользоваться бонусными баллами?</a></li>
+            <li class="rightColumn"><a href="">Примеры использования бонусных баллов</a></li>
+          </ul>
+          <ul class="linksRow clearfix">
+            <li class="leftColumn"><a href="">Информация о&nbsp;карте постоянного покупателя</a></li>
+            <li class="centerColumn"><a href="">Как проверить баланс бонусных баллов на&nbsp;карте?</a></li>
+            <li class="rightColumn"><a href="">Как проверить баланс бонусных баллов на&nbsp;карте?</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="window" id="marketPart">
         <div class="notMainPageCont">
           <h1>Магазины</h1>
@@ -242,7 +267,11 @@
           </div>
         </div>
       </div>
-      <div class="window" id="brendsPart">brends</div>
+      <div class="window" id="brendsPart">
+        <div class="notMainPageCont">
+          <h1>ОДЕЖДА, ОБУВЬ И АКСЕССУАРЫ<br/>ОТ МИРОВЫХ БРЕНДОВ</h1>
+        </div>
+      </div>
 
    <!-- tabs & footer end /// --> 
    </div>
@@ -371,7 +400,7 @@
             var sb = new SelectBox({
               selectbox: $(this),
               height: 224,
-              width: 221
+              width: 223
             });
           });
           
