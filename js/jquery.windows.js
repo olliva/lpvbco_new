@@ -96,7 +96,6 @@ var that = this,
      */
     var _onScroll = function(){
         s = $w.scrollTop();
-        $('html,body').stop();
         
         _snapWindow();
 
