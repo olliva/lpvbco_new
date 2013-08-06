@@ -126,6 +126,9 @@ var that = this,
                     scrollTo = $visibleWindow.offset().top, // top of visible window
                     completeCalled = false;
                 // animate to top of visible window
+
+                $('body').append('scrollTo: ' + scrollTo);
+
                 $('html:not(:animated),body:not(:animated)').animate({scrollTop: scrollTo }, options.snapSpeed, function(){
                     if(!completeCalled){
                         if(t){clearTimeout(t);}
