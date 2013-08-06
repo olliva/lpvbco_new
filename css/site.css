@@ -703,10 +703,23 @@ body{
 			color: #919191;
 		}
 
+.leftMenuBut{
+	position: fixed;
+	z-index: 1000;
+	display: none;
+	cursor: pointer;
+	height: 100%;
+	vertical-align: middle;
+	margin-top: 200px;
+}
+
 
 @media only screen and (max-width : 1200px) {
 	.leftMenu{
 		display: none;
+	}
+	.leftMenuBut{
+		display: block;
 	}
 	.contWithPad{
 		padding-left: 0;

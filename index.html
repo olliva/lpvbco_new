@@ -66,6 +66,7 @@
     <a href="" id="ber"></a>
     <a href="" id="mop"></a>
   </div>
+  <div class="leftMenuBut"><img src="img/left-menu-but.png" alt=""></div>
   <div class="contWithPad">
     <div class="pagesCont window">
     <!-- slider code start -->
@@ -443,6 +444,17 @@
           });
           
         });
+      </script>
+
+      <script type="text/javascript">
+      $(document).ready(function(){
+          $(".leftMenuBut").click(function(){
+            $('.leftMenu').toggle();
+          });
+          $(window).resize(function(){
+            $('.leftMenu').removeAttr("style");
+          });
+      });
       </script>
       <script src="js/jquery.leanModal.min.js"></script>
       <!-- preview-related stylesheets -->
