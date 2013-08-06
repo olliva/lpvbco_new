@@ -65,7 +65,7 @@
 		
 		function init() {
 
-			_useDefaultBehavior = false;//(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) ? true : false;
+			_useDefaultBehavior = (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) ? true : false;
 
 			var selectId = "";
 			if(typeof cfg.selectbox.attr("id") !== "undefined") {
