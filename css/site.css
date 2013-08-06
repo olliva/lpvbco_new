@@ -302,10 +302,15 @@ body{
 	height: 100%;
 	background: url(../img/slides-back.png);
 	z-index: 100;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
 }
-.rsActiveSlide .back{
-	background: none;
+.rsSlide.rsActiveSlide .back{
+	opacity: 0;
 	z-index: 1;
+	-webkit-transition: none;
+	transition: none;
 }
 
 .rsContainer img{
@@ -710,17 +715,62 @@ body{
 	cursor: pointer;
 	height: 100%;
 	vertical-align: middle;
-	margin-top: 200px;
+	top: 50%;
+	overflow: hidden;
+}
+
+.leftMenuBut .halfCirlce
+{
+	color: gray;
+	background-color: #363636;
+	width: 48px;
+	height: 48px;
+	border-radius: 100%;
+	margin-left: -24px;
+}
+
+.leftMenuBut .halfCirlce .arrow
+{
+	display: block;
+	margin-left: 31px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.leftMenuBut.visible .halfCirlce .arrow
+{
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+.leftMenu,
+.leftMenuBut
+{
+	transition: left 0.3s;
+	-webkit-transition: left 0.3s;
 }
 
 
 @media only screen and (max-width : 1200px) {
 	.leftMenu{
-		display: none;
+		left: -120px;
 	}
+
+	.leftMenu.visible
+	{
+		left: 0;
+	}
+
 	.leftMenuBut{
 		display: block;
 	}
+
+	.leftMenuBut.visible{
+		left: 120px;
+	}
+
 	.contWithPad{
 		padding-left: 0;
 	}
