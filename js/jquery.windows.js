@@ -96,7 +96,8 @@ var that = this,
      */
     var _onScroll = function(){
         s = $w.scrollTop();
-
+        $('html,body').stop();
+        
         _snapWindow();
 
         options.onScroll(s);
@@ -127,7 +128,6 @@ var that = this,
                     completeCalled = false;
                 // animate to top of visible window
 
-                $('body').append('scrollTo: ' + scrollTo);
 
                 $('html:not(:animated),body:not(:animated)').animate({scrollTop: scrollTo }, options.snapSpeed, function(){
                     if(!completeCalled){
